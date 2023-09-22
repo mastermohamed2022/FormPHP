@@ -29,7 +29,7 @@ foreach($_POST as $key => $value){
 
     if(!requireVal($email)){
         $errors[]= "email is requird";
-    }elseif(emailVal($email)){
+    }elseif(!emailVal($email)){
         $errors[]= "Please type a valid email";
     
     }
@@ -54,8 +54,8 @@ foreach($_POST as $key => $value){
 
     if(empty($errors)){
         $user_file = fopen("../data/user.csv","a+");
-        $data =[$name,$email,shal($password)];
-        fputcsv($ $user_file,$data);
+        $data =[$name,$email,sha1($password)];
+        fputcsv($user_file,$data);
         //redirect
 
         $_SESSION['auth']=[$name,$email];
