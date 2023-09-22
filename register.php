@@ -14,12 +14,13 @@
             <div class="alert alert-danger text-center">
                 <?php echo $errors; ?>
             </div>
-        <?php endforeach; ?>
-    <?php endif ?>
-
-    <!-- endif;
+    
+  
+    <?php
+    endforeach;
+    endif;
     unset($_SESSION['errors']);
-    ?> -->
+    ?> 
     <form action="./handerlers/handelRegister.php" method="POST">
         <div class="mb-3">
             <label for="input-name" class="form-label">Full Name</label>
