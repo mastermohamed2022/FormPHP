@@ -1,3 +1,7 @@
-<?php include'inc/heder.php'; ?>
-<?php include'inc/footer.php'; ?>
-<?php include'inc/nav.php'; ?>
+<?php
+session_start();
+include 'core/function.php';
+
+session_destroy();
+redirect('login.php');
+die;

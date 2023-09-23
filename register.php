@@ -6,7 +6,8 @@
 
 <div class="container my-3 w-5">
     <div class="card text-center p-3 bg-primary my-3 text-white">
-        Register
+       <h4> Register</h4>
+
     </div>
     
     <?php if(isset($_SESSION['errors'])): ?>

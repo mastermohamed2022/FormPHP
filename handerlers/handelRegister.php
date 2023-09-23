@@ -59,10 +59,12 @@ foreach($_POST as $key => $value){
         //redirect
 
         $_SESSION['auth']=[$name,$email];
+        redirect("../index.php");
+        die();
 
     }else{
         $_SESSION['errors'] = $errors;
-        header("location:../register.php");
+        redirect("../register.php");
         die;
     }
 
