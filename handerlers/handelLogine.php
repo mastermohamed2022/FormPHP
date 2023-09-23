@@ -22,6 +22,7 @@ foreach ($users as $user) {
     if ($user[1] === $email && $user[2] === sha1($password)) {
         $_SESSION["auth"] = $user;
         redirect("../index.php");
+        die();
     }
 }
 
